@@ -15,15 +15,26 @@ function convertToRoman(num) {
     I: 1,
   };
   //your code here
-      var roman = '',
-      var i;
-  for ( i in symbols ) {
-    while ( num >= symbols[i] ) {
-      roman += i;
-      num -= symbols[i];
-    }
-  }
-  return roman;
+//        roman = '',
+//        i;
+//   for ( i in symbols ) {
+//     while ( num >= symbols[i] ) {
+//       roman += i;
+//       num -= symbols[i];
+//     }
+//   }
+//   return roman;
+  if (isNaN(num))
+        return NaN;
+    var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
