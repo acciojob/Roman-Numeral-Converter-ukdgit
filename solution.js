@@ -15,6 +15,15 @@ function convertToRoman(num) {
     I: 1,
   };
   //your code here
+      var roman = '',
+      var i;
+  for ( i in symbols ) {
+    while ( num >= symbols[i] ) {
+      roman += i;
+      num -= symbols[i];
+    }
+  }
+  return roman;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
