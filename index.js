@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const convertToRoman = require('./solution');
+const convertToRoman = require('./script');
 
 app.use(express.static(__dirname))
 
