@@ -16,24 +16,13 @@ function convertToRoman(num) {
   };
   //your code here
 
-//       const romNumerals = [   "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
-//                             "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
-//                             "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
-//                             "", "M", "MM", "MMM"
-//     ];
-//     return  romNumerals[Math.floor(num / 1000) + 30] +
-//             romNumerals[Math.floor(num / 100 % 10) + 20] +
-//             romNumerals[Math.floor(num / 10 % 10) + 10] +
-//             romNumerals[Math.floor(num % 10)];
-
-
-	
+      
        if (isNaN(num))
         return NaN;
     var digits = String(+num).split(""),
-        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
-               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        key = ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "I","II","III","IV","V","VI","VII","VIII","IX"],
         roman = "",
         i = 3;
     while (i--)
